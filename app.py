@@ -22,13 +22,13 @@ def index():
     return "Hello Anway"
 
 
-@app.route("/create", methods=["GET"])
+@app.route("/create/", methods=["GET"])
 def createCatalogue():
 
     return render_template("addItem.html", categories=CATEGORIES, units=UNITS)
 
 
-@app.route("/recieve", methods=["POST"])
+@app.route("/recieve/", methods=["POST"])
 def recieve():
     catalogueItem = {
         "_id": uuid.uuid4().hex,
