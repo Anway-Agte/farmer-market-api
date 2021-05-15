@@ -9,7 +9,7 @@ app = Flask(__name__)
 
 @app.route("/", methods=["GET"])
 def index():
-    return "Hello World"
+    return "Hello Anway"
 
 
 if __name__ == "__main__":
