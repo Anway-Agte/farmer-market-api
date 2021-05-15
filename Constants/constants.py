@@ -1,1 +1,10 @@
-CATEGORIES = ["Leafy Vegetables", "Fruits", "Roots"]
+CATEGORIES = [
+    "फळभाजी",
+    "काही खास गोष्टी",
+    "Others",
+    "पालेभाजी",
+    "सेंद्रीय कडधान्ये",
+    "सेंद्रिय फळे",
+    "ताजे दळलेले पीठ",
+]
+UNITS = ["kg", "gm", "dozen", "piece"]
