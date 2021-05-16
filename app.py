@@ -56,11 +56,16 @@ def recieve():
     return redirect(url_for("createCatalogue"))
 
 
-@app.route("/register")
+@app.route("/register", method=["POST"])
 def register():
     data = request.get_json()
     print(data)
     return jsonify({"status": "OK"})
+
+
+@app.route("/fetch", methods=["GET", "POST"])
+def fetch():
+    return jsonify({"status": "ok"})
 
 
 if __name__ == "__main__":
