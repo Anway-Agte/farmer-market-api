@@ -22,13 +22,12 @@ def index():
     return "Hello Anway"
 
 
-@app.route("/create/", methods=["GET"])
+@app.route("/create", methods=["GET"])
 def createCatalogue():
+    return render_template("additem.html", categories=CATEGORIES, units=UNITS)
 
-    return render_template("addItem.html", categories=CATEGORIES, units=UNITS)
 
-
-@app.route("/recieve/", methods=["POST"])
+@app.route("/recieve", methods=["POST"])
 def recieve():
     catalogueItem = {
         "_id": uuid.uuid4().hex,
@@ -38,6 +37,7 @@ def recieve():
         "per": int(request.form.get("per")),
         "unit": request.form.get("unit"),
         "inc_factor": 0,
+        "available": True,
     }
 
     if catalogueItem["unit"] == "kg":
